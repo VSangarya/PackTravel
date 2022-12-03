@@ -1,4 +1,5 @@
 # 🐺 PackTravel
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/df6694ed8d644df1822a1caa1669e504)](https://app.codacy.com/gh/VSangarya/PackTravel?utm_source=github.com&utm_medium=referral&utm_content=VSangarya/PackTravel&utm_campaign=Badge_Grade_Settings)
 [![Build](https://github.com/VSangarya/PackTravel/actions/workflows/build.yml/badge.svg)](https://github.com/VSangarya/PackTravel/actions/workflows/build.yml)
 [![Commit Acitivity](https://img.shields.io/github/commit-activity/w/VSangarya/PackTravel)](https://github.com/VSangarya/PackTravel/pulse)
 [![Issues](https://img.shields.io/github/issues/VSangarya/PackTravel?color=red)](https://github.com/VSangarya/PackTravel/issues)
