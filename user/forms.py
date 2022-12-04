@@ -1,5 +1,8 @@
 from django import forms
 from django.contrib.auth.models import User
+import os
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PackTravel.settings')
 
 class RegisterForm(forms.ModelForm):
     username = forms.CharField(required=True, widget=forms.TextInput(attrs={'placeholder': 'Enter a username', 'class': 'form-control'}))
