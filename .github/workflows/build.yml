@@ -30,17 +30,18 @@ jobs:
           pylint --errors-only --verbose --rcfile=pylintrc publish/*.py
           pylint --errors-only --verbose --rcfile=pylintrc search/*.py
 
-#      - name: Run tests and coverage report
-#        run: |       
-#          coverage run --source=src --data-file tests/.coverage -m pytest -s
-#          coverage xml --data-file tests/.coverage -o tests/coverage.xml
-#          coverage report --data-file tests/.coverage -m
+      - name: Run tests and coverage report for Publish module
+        run: |       
+          python manage.py shell
+          coverage run --source=src --data-file publish/tests/.coverage -m pytest -s
+          coverage xml --data-file publish/tests/.coverage -o publish/tests/coverage.xml
+          coverage report --data-file publish/tests/.coverage -m
           
-#      - name : Send coverage report
-#        run: |
-#          pip install codacy-coverage
-#          export CODACY_PROJECT_TOKEN=${{ secrets.CODACY_PROJECT_TOKEN }}
-#          export CODACY_API_TOKEN=${{ secrets.CODACY_API_TOKEN }}
-#          export CODACY_USERNAME=VSangarya
-#          export CODAY_PROJECT_NAME=AMATSA
-#          python-codacy-coverage -r tests/coverage.xml
+      - name : Send coverage report
+        run: |
+          pip install codacy-coverage
+          export CODACY_PROJECT_TOKEN=${{ secrets.CODACY_PROJECT_TOKEN }}
+          export CODACY_API_TOKEN=${{ secrets.CODACY_API_TOKEN }}
+          export CODACY_USERNAME=VSangarya
+          export CODAY_PROJECT_NAME=AMATSA
+          python-codacy-coverage -r publish/tests/coverage.xml
