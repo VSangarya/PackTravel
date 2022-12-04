@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect
 from datetime import datetime
 from utils import get_client
 import uuid
+import os
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PackTravel.settings')
 
 # database connections
 db_client = None
