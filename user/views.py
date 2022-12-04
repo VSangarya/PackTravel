@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect
 from utils import get_client
 from .forms import RegisterForm, LoginForm
 import hashlib
+import os
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PackTravel.settings')
 
 # database connections
 db_client = None
